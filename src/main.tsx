@@ -1,5 +1,8 @@
-import { render } from 'preact'
-import './index.css'
-import { App } from './app.tsx'
+import {render} from 'preact';
+import {App} from './app/App';
+import {applyStoreTheme, storeConfig} from './config/store';
+import './styles/index.css';
 
-render(<App />, document.getElementById('app')!)
+applyStoreTheme(storeConfig);
+
+render(<App />, document.getElementById('app')!);
